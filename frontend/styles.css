@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #1f2937;
+  background: linear-gradient(135deg, #0f172a, #111827);
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.app-header p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.message-row {
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.assistant {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.message-row.user .message-bubble {
+  background: #2563eb;
+  color: #f9fafb;
+  border-bottom-right-radius: 2px;
+}
+
+.message-row.assistant .message-bubble {
+  background: #111827;
+  color: #e5e7eb;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #1f2937;
+}
+
+.chat-form {
+  display: flex;
+  padding: 12px 16px;
+  border-top: 1px solid #1f2937;
+  background: #020617;
+  gap: 8px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.chat-input:focus {
+  border-color: #2563eb;
+}
+
+.chat-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #f9fafb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.chat-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
