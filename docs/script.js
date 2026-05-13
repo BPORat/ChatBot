@@ -1,5 +1,6 @@
 // Cuando despliegues el backend, cambia esta URL por la pública
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "https://chatbot-production-6731.up.railway.app";
+
 
 const chatMessagesElement = document.getElementById("chat-messages");
 const chatFormElement = document.getElementById("chat-form");
